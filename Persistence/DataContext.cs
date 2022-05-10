@@ -4,14 +4,13 @@ using MySql.Data.MySqlClient;
 using Persistence.Fluents;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Persistence
 {
-    [DbConfigurationType(typeof(MySqlConfiguration))]
+    [Microsoft.EntityFrameworkCore.EntityTypeConfiguration(typeof(MySqlConfiguration))]
     public class DataContext: Microsoft.EntityFrameworkCore.DbContext
     {
         public DataContext(DbContextOptions options) : base(options) {

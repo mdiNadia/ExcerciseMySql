@@ -780,7 +780,4 @@ C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\ref\Excercise.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.pdb
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.genruntimeconfig.cache
-C:\Users\nadia\Desktop\Excercise\MySql\Excercise\bin\Debug\net6.0\EntityFramework.SqlServer.dll
-C:\Users\nadia\Desktop\Excercise\MySql\Excercise\bin\Debug\net6.0\EntityFramework.dll
-C:\Users\nadia\Desktop\Excercise\MySql\Excercise\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.csproj.CopyComplete
