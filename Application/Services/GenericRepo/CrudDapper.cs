@@ -15,16 +15,20 @@ namespace Application.Services.GenericRepo
     public interface IDapper : IDisposable
     {
         List<T> GetAll<T>(string sp);
+        Task<string> DeleteAll(string sp);
+
 
     }
     public class Dapperr : IDapper
     {
         private readonly IConfiguration _config;
 
+
         public Dapperr(IConfiguration config)
         {
-            _config = config;
+            this._config = config;
         }
+
         public void Dispose()
         {
 
@@ -33,8 +37,8 @@ namespace Application.Services.GenericRepo
 
         public List<T> GetAll<T>(string ModelEntity)
         {
-            var sqlQuery = $@"Select * from {ModelEntity}";
             string connectionString = _config.GetConnectionString("DefaultConnection");
+            var sqlQuery = $@"Select * from {ModelEntity}";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
 
@@ -45,11 +49,11 @@ namespace Application.Services.GenericRepo
 
         public List<T> GetAllInPaging<T>(int skip, int take, string ModelEntity)
         {
+            string connectionString = _config.GetConnectionString("DefaultConnection");
 
             var sqlQuery = $@"SELECT * FROM {ModelEntity}
                            ORDER BY Id OFFSET {skip} 
                            ROWS FETCH NEXT {take} ROWS ONLY";
-            string connectionString = _config.GetConnectionString("DefaultConnection");
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
 
@@ -57,6 +61,23 @@ namespace Application.Services.GenericRepo
 
             }
         }
+
+        public async Task<string> DeleteAll(string ModelEntity)
+        {
+            string connectionString = _config.GetConnectionString("DefaultConnection");
+            var sqlQuery = $@"delete from {ModelEntity}";
+
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                return connection.Execute(sqlQuery).ToString();
+
+
+
+
+            }
+        }
+
 
     }
 }

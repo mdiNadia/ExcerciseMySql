@@ -30,6 +30,15 @@ namespace Excercise.Pages
             return Page();
         }
 
+        public IActionResult OnGetDelete()
+        {
+            var data =  _dapper.DeleteAll("ExcerciseEntities");
+        
+                return RedirectToPage();
 
+            
+
+
+        }
     }
 }

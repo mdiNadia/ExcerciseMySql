@@ -14,6 +14,7 @@ C:\Users\nadia\Desktop\Excercise\MySql\Application\bin\Debug\net6.0\Application.
 C:\Users\nadia\Desktop\Excercise\MySql\Application\bin\Debug\net6.0\Application.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Application\bin\Debug\net6.0\ref\Application.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
 C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
 C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
@@ -21,4 +22,3 @@ C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.
 C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\ref\Application.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.pdb
-C:\Users\nadia\Desktop\Excercise\MySql\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache

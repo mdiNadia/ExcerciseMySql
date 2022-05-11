@@ -8,7 +8,7 @@ namespace Domain
 {
     public class ExcerciseEntity
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public DateTime CreateDate { get; set; }
         public string SerialNumber{ get; set; }
         public int DeviceId { get; set; }

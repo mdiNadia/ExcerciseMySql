@@ -15,7 +15,7 @@ namespace Persistence.Fluents
 
             public void Configure(EntityTypeBuilder<ExcerciseEntity> builder)
             {
-
+             
             }
         }
     

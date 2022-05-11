@@ -2,32 +2,58 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+
+    var i = 0;
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+@if (Model._Model != null)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-right">
 
-    <table>
-        <thead>
+                <a href="/Index?handler=Delete" class="btn btn-danger m-2 p-2">پاک کردن همه دیتا</a>
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>آیدی</th>
+                            <th>تاریخ</th>
+                            <th> آیدی سریال</th>
+                            <th> آیدی ماشین</th>
+                            <th> آیدی دستگاه</th>
+                            <th> آیدی رفرنس</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-        </thead>
-        <tbody>
-            @foreach (var item in Model._Model)
-            {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.CreateDate</td>
-                <td>@item.SerialNumber</td>
-                <td>@item.IdMachine</td>
-                <td>@item.DeviceId</td>
-                <td>@item.RefId</td>
-            </tr>
-            }
-        </tbody>
-        <tfoot>
+                        @foreach (var item in Model._Model)
+                        {
+                            <tr>
+                                <td>@(i+1)</td>
+                                <td>@item.Id</td>
+                                <td>@item.CreateDate</td>
+                                <td>@item.SerialNumber</td>
+                                <td>@item.IdMachine</td>
+                                <td>@item.DeviceId</td>
+                                <td>@item.RefId</td>
+                            </tr>
+                            i++;
+                        }
+                    </tbody>
+                    <tfoot>
 
-        </tfoot>
-    </table>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        </div>
+ 
+}
+
 

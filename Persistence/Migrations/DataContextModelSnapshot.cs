@@ -21,9 +21,8 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.ExcerciseEntity", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime(6)");
