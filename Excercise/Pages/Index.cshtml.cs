@@ -34,11 +34,16 @@ namespace Excercise.Pages
         {
             var data =  _dapper.DeleteAll("ExcerciseEntities");
         
-                return RedirectToPage();
-
-            
-
-
+           return RedirectToPage();
         }
+
+        //https://localhost:8000/Index?handler=Report&serial=28218094
+        [HttpPost]
+        public IActionResult OnGetReport(string serial)
+        {
+           var data = _dapper.GetReportData<int>("ExcerciseEntities", "SerialNumber", serial, "DeviceId");
+            return Partial("_ReportPartial",data);
+        }
+
     }
 }

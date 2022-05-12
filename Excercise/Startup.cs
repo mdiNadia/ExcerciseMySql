@@ -28,12 +28,18 @@ namespace Excercise
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
+        
 
-             services.AddDbContext<DataContext>(opt =>
+            services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
             });
-
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
             services.AddRazorPages();
             services.AddService();
         }
@@ -56,6 +62,7 @@ namespace Excercise
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseCors("MyPolicy");
 
             app.UseAuthorization();
 

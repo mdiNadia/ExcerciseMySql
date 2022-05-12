@@ -1,4 +1,11 @@
-﻿
+﻿@model List<int>
 <p>
-    @Model
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li style="display:inline-table">@item</li>
+        }
+    </ul>
+
+    
 </p>

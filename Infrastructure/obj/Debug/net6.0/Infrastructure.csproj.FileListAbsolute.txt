@@ -10,14 +10,3 @@ C:\Users\nadia\Desktop\Excercise\Excercise\Infrastructure\obj\Debug\net6.0\Infra
 C:\Users\nadia\Desktop\Excercise\Excercise\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
 C:\Users\nadia\Desktop\Excercise\Excercise\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
 C:\Users\nadia\Desktop\Excercise\Excercise\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\ref\Infrastructure.dll
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb

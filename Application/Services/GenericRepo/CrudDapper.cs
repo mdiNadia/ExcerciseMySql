@@ -16,6 +16,8 @@ namespace Application.Services.GenericRepo
     {
         List<T> GetAll<T>(string sp);
         Task<string> DeleteAll(string sp);
+        List<T> GetReportData<T>(string sp, string filterField, string filterValue, string selectedField);
+
 
 
     }
@@ -77,7 +79,18 @@ namespace Application.Services.GenericRepo
 
             }
         }
+        public List<T> GetReportData<T>(string ModelEntity, string filterField, string filterValue,string selectedField)
+        {
+            string connectionString = _config.GetConnectionString("DefaultConnection");
+            var sqlQuery = $@"SELECT {selectedField} FROM {ModelEntity} USE INDEX ({filterField}) where {filterField}={filterValue}
+                           ORDER BY Id";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
 
+                return connection.Query<T>(sqlQuery).ToList();
+
+            }
+        }
 
     }
 }
