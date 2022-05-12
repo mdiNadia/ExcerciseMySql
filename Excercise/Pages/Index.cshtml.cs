@@ -1,9 +1,10 @@
-﻿using Application.Services.GenericRepo;
-using Domain;
+﻿using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System;
+using Persistence.Interfaces;
+using Persistence.Interfaces.GenericRepo;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -14,13 +15,15 @@ namespace Excercise.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private readonly IDapper _dapper;
+        private readonly ICrudDapper _dapper;
+        private readonly IExcerciseService _excerciseService;
         public IEnumerable<ExcerciseEntity> _Model;
 
-        public IndexModel(ILogger<IndexModel> logger, IDapper dapper)
+        public IndexModel(ILogger<IndexModel> logger, ICrudDapper dapper,IExcerciseService excerciseService)
         {
             _logger = logger;
             this._dapper = dapper;
+            this._excerciseService = excerciseService;
         }
 
         public IActionResult OnGet()
@@ -39,9 +42,10 @@ namespace Excercise.Pages
 
         //https://localhost:8000/Index?handler=Report&serial=28218094
         [HttpPost]
-        public IActionResult OnGetReport(string serial)
+        public async Task<IActionResult> OnGetReport(string serial)
         {
-           var data = _dapper.GetReportData<int>("ExcerciseEntities", "SerialNumber", serial, "DeviceId");
+            //var data = _dapper.GetReportData<int>("ExcerciseEntities", "SerialNumber", serial, "DeviceId");
+            var data =await _excerciseService.GetQueryList().AsNoTracking().Where(c => c.SerialNumber == serial).Select(c=>c.DeviceId).ToListAsync();
             return Partial("_ReportPartial",data);
         }
 

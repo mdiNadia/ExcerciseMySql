@@ -266,6 +266,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\nadia\\Desktop\\Excercise\\MySql\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\nadia\\Desktop\\Excercise\\MySql\\Application\\Application.csproj"
+              },
               "C:\\Users\\nadia\\Desktop\\Excercise\\MySql\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\nadia\\Desktop\\Excercise\\MySql\\Domain\\Domain.csproj"
               }

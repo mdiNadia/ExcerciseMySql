@@ -26,8 +26,9 @@ C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.
 C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
 C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
 C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
-C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.csproj.CopyComplete
 C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\ref\Persistence.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.pdb
 C:\Users\nadia\Desktop\Excercise\MySql\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
+C:\Users\nadia\Desktop\Excercise\MySql\Persistence\bin\Debug\net6.0\Application.dll
+C:\Users\nadia\Desktop\Excercise\MySql\Persistence\bin\Debug\net6.0\Application.pdb
