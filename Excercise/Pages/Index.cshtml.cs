@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Application.Dtos;
+using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using Persistence.Interfaces;
 using Persistence.Interfaces.GenericRepo;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -44,9 +46,15 @@ namespace Excercise.Pages
         [HttpPost]
         public async Task<IActionResult> OnGetReport(string serial)
         {
-            //var data = _dapper.GetReportData<int>("ExcerciseEntities", "SerialNumber", serial, "DeviceId");
-            var data =await _excerciseService.GetQueryList().AsNoTracking().Where(c => c.SerialNumber == serial).Select(c=>c.DeviceId).ToListAsync();
+            //var data = _excerciseService.GetReportData<GetDeviceInfoDto>(serial);
+            var data =await _excerciseService.GetQueryList().AsNoTracking().Where(c => c.SerialNumber == serial)
+                .GroupBy(c => c.DeviceId)
+                .Select(g => new GetDeviceInfoDto() { MachinId = g.OrderByDescending(r=>r.IdMachine).Select(r => r.IdMachine).LastOrDefault(), RefId = g.OrderByDescending(r => r.RefId).Select(r => r.RefId).LastOrDefault(), EventId = g.Select(r => r.IdEvent).FirstOrDefault(), DeviceId = g.Select(r => r.DeviceId).FirstOrDefault(), FirstDate = g.Min(r => r.CreateDate), LastDate = g.Max(r => r.CreateDate) })
+                .ToListAsync();
+            var s = data;
+
             return Partial("_ReportPartial",data);
+
         }
 
     }
