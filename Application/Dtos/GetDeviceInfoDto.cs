@@ -14,5 +14,7 @@ namespace Application.Dtos
         public int EventId { get; set; }
         public int MachinId { get; set; }
         public int RefId { get; set; }
+
+
     }
 }

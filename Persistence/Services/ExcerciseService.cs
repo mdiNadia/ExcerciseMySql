@@ -31,8 +31,26 @@ namespace Persistence.Services
         public List<T> GetReportData<T>(string serial)
         {
             string connectionString = _config.GetConnectionString("DefaultConnection");
-            var sqlQuery = $@"SELECT DeviceId FROM ExcerciseEntities USE INDEX (SerialNumber) where SerialNumber={serial}
-                           ORDER BY DeviceId";
+            //var sqlQuery = $@"SELECT DeviceId FROM ExcerciseEntities USE INDEX (SerialNumber) where SerialNumber={serial}
+            //               ORDER BY DeviceId";
+            var sqlQuery = $@"SELECT t.DeviceId,t.FirstDate,t.LastDate, t.IdMachine,t.RefId,t.IdEvent,t.devId,t.idMachin,
+                              t.idRef,t.eveId From (
+                              SELECT g.DeviceId,g.FirstDate,g.LastDate,g.IdMachine,g.RefId,g.IdEvent
+                              ,ROW_NUMBER() OVER (PARTITION BY g.DeviceId ORDER BY g.DeviceId ASC) as devId
+                              ,ROW_NUMBER() OVER(PARTITION BY g.DeviceId ORDER BY g.IdMachine DESC) as idMachin
+                              ,ROW_NUMBER() OVER(PARTITION BY g.DeviceId ORDER BY g.RefId DESC) as idRef
+                              ,ROW_NUMBER() OVER(PARTITION BY g.DeviceId ORDER BY g.IdEvent ASC) as eveId
+                              FROM
+                              (SELECT
+                              e.DeviceId
+                              ,e.IdMachine
+                              ,e.RefId
+                              ,e.IdEvent
+                              ,min(cast(e.CreateDate as date)) as FirstDate
+                              ,max(cast(e.CreateDate as date)) as LastDate
+                              FROM excerciseentities e where SerialNumber={serial}
+                              group by DeviceId) as g
+                              ) as t";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
