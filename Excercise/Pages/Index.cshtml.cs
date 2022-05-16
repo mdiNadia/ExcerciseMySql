@@ -51,10 +51,10 @@ namespace Excercise.Pages
                 .GroupBy(c => c.DeviceId)
                 .Select(g => new GetDeviceInfoDto()
                 {
-                    MachinId = g.Select(r => r.IdMachine).OrderByDescending(r => r).FirstOrDefault(),
-                    RefId = g.Select(r => r.RefId).OrderByDescending(r => r).FirstOrDefault(),
-                    EventId = g.Select(r => r.IdEvent).OrderBy(r => r).FirstOrDefault(),
-                    DeviceId = g.Select(r => r.DeviceId).OrderBy(r => r).FirstOrDefault(),
+                    MachinId = g.Select(r => r.IdMachine).FirstOrDefault(),
+                    RefId = g.Select(r => r.RefId).FirstOrDefault(),
+                    EventId = g.Select(r => r.IdEvent).FirstOrDefault(),
+                    DeviceId = g.Select(r => r.DeviceId).FirstOrDefault(),
                     FirstDate = g.Min(r => r.CreateDate),
                     LastDate = g.Max(r => r.CreateDate)
                 })
