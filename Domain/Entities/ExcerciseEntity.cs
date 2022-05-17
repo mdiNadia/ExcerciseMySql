@@ -12,9 +12,9 @@ namespace Domain
         public DateTime CreateDate { get; set; }
         public string SerialNumber{ get; set; }
         public int DeviceId { get; set; }
-        public int RefId { get; set; }
-        public int IdMachine { get; set; }
-        public int IdEvent { get; set; }
+        public string RefId { get; set; }
+        public string IdMachine { get; set; }
+        public string IdEvent { get; set; }
 
     }
 }

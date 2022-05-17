@@ -14,7 +14,6 @@ C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\Infrastru
 C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\ref\Infrastructure.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
-C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
 C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
 C:\Users\nadia\Desktop\Excercise\MySql\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
