@@ -11,8 +11,8 @@ namespace Application.Dtos
         public int DeviceId { get; set; }
         public DateTime FirstDate { get; set; }
         public DateTime LastDate { get; set; }
-        public string EventId { get; set; }
-        public string MachinId { get; set; }
+        public string IdEvent { get; set; }
+        public string IdMachine { get; set; }
         public string RefId { get; set; }
 
 

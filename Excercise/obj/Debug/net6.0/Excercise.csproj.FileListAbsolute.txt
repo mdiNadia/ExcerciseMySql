@@ -776,7 +776,6 @@ C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.Razo
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\scopedcss\bundle\Excercise.styles.css
-C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.csproj.CopyComplete
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\ref\Excercise.dll
 C:\Users\nadia\Desktop\Excercise\MySql\Excercise\obj\Debug\net6.0\Excercise.pdb

@@ -46,20 +46,19 @@ namespace Excercise.Pages
         [HttpPost]
         public async Task<IActionResult> OnGetReport(string serial)
         {
-            //var data = _excerciseService.GetReportData<GetDeviceInfoDto>(serial);
-            var data = await _excerciseService.GetQueryList().AsNoTracking().Where(c => c.SerialNumber == serial)
-                .GroupBy(c => c.DeviceId)
-                .Select(g => new GetDeviceInfoDto()
-                {
-                    MachinId = g.Select(r => r.IdMachine).FirstOrDefault(),
-                    RefId = g.Select(r => r.RefId).FirstOrDefault(),
-                    EventId = g.Select(r => r.IdEvent).FirstOrDefault(),
-                    DeviceId = g.Select(r => r.DeviceId).FirstOrDefault(),
-                    FirstDate = g.Min(r => r.CreateDate),
-                    LastDate = g.Max(r => r.CreateDate)
-                })
-                .ToListAsync();
-            var s = data;
+            List<GetDeviceInfoDto> data = _excerciseService.GetReportData<GetDeviceInfoDto>(serial);
+            //var data = await _excerciseService.GetQueryList().AsNoTracking().Where(c => c.SerialNumber == serial)
+            //    .GroupBy(c => c.DeviceId)
+            //    .Select(g => new GetDeviceInfoDto()
+            //    {
+            //        IdMachine = g.Select(r => r.IdMachine).FirstOrDefault(),
+            //        RefId = g.Select(r => r.RefId).FirstOrDefault(),
+            //        IdEvent = g.Select(r => r.IdEvent).FirstOrDefault(),
+            //        DeviceId = g.Select(r => r.DeviceId).FirstOrDefault(),
+            //        FirstDate = g.Min(r => r.CreateDate),
+            //        LastDate = g.Max(r => r.CreateDate)
+            //    })
+            //    .ToListAsync();
 
             return Partial("_ReportPartial",data);
 
